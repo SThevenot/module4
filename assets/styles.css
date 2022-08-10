@@ -1,0 +1,85 @@
+/** @format */
+
+* {
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #edcfa9;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main {
+  text-align: center;
+}
+
+h1 {
+  display: flex;
+  padding: 20px 50px;
+}
+
+h3 {
+  display: flex;
+  padding: 20px 40px;
+}
+
+hr {
+  border: 2px #aa4a30 solid;
+  width: 95%;
+}
+
+div {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+main p {
+  border: 2px solid #aa4a30;
+  border-radius: 6px;
+  background-color: #e89f71;
+  color: #edcfa9;
+  padding: 10px 10px;
+  width: 200px;
+}
+
+#startBtn {
+  margin: 200px;
+  color: #aa4a30;
+  background-color: #d57149;
+  border: 3px solid #aa4a30;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  font-size: medium;
+}
+
+#nextBtn {
+  margin: 200px;
+  color: #aa4a30;
+  background-color: #d57149;
+  border: 3px solid #aa4a30;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  font-size: medium;
+  display: none;
+}
+
+h4 {
+  margin-left: 900px;
+}
+
+.finalScore {
+  display: none;
+}
+
+.finalTime {
+  display: none;
+  justify-content: center;
+}

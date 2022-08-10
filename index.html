@@ -1,0 +1,73 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>My Quiz</h1>
+        <h3>View high scores</h3>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <h4 class="timer"></h4>
+      <h5 class="finalTime"></h5>
+      <div class="box1" data-state="hidden">
+        <h2>Which animal is behind the most power outages in the U.S?</h2>
+        <p id="p1true" onclick="showDiv2()">Squirrels</p>
+        <p class="pfalse" onclick="showDiv2()">Birds</p>
+        <p class="pfalse" onclick="showDiv2()">Chipmunks</p>
+        <p class="pfalse" onclick="showDiv2()">Raccoons</p>
+      </div>
+      <div class="box2" data-state="hidden">
+        <h2>What animal was mayor of an Alaskan town for 20 years?</h2>
+        <p class="pfalse" onclick="showDiv3()">A squirrel</p>
+        <p class="pfalse" onclick="showDiv3()">A dog</p>
+        <p id="p2true" onclick="showDiv3()">A cat</p>
+        <p class="pfalse" onclick="showDiv3()">A monkey</p>
+      </div>
+      <div class="box3" data-state="hidden">
+        <h2>A cornflake in the shape of what state sold for $1,350?</h2>
+        <p class="pfalse" onclick="showDiv4()">North Dakota</p>
+        <p class="pfalse" onclick="showDiv4()">California</p>
+        <p class="pfalse" onclick="showDiv4()">Texas</p>
+        <p id="p3true" onclick="showDiv4()">Illinois</p>
+      </div>
+      <div class="box4" data-state="hidden">
+        <h2>What is the name of the man who created comic sans?</h2>
+        <p class="pfalse" onclick="showDiv5()">George Washington</p>
+        <p id="p4true" onclick="showDiv5()">Vincent Connare</p>
+        <p class="pfalse" onclick="showDiv5()">Roy Huntington</p>
+        <p class="pfalse" onclick="showDiv5()">Vanessa Williams</p>
+      </div>
+      <div class="box5" data-number="5" data-state="hidden">
+        <h2>What color are some of Australia's lakes?</h2>
+        <p id="p5true" onclick="showScore();pause_timer()">Pink</p>
+        <p class="pfalse" onclick="showScore();pause_timer()">Yellow</p>
+        <p class="pfalse" onclick="showScore();pause_timer()">Black</p>
+        <p class="pfalse" onclick="showScore();pause_timer()">Orange</p>
+      </div>
+      <div class="finalScore">
+        <label for="initials">Enter initials : </label>
+        <br />
+        <input type="text" id="initial" name="initial" />
+        <button id="submit" onclick="scoreboard()">Submit</button>
+      </div>
+      <button id="startBtn">Start</button>
+    </main>
+    <footer>
+      <a href="https://bestlifeonline.com/weird-amazing-facts/"
+        >Where I got these facts</a
+      >
+    </footer>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
