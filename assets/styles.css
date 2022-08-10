@@ -59,18 +59,6 @@ main p {
   font-size: medium;
 }
 
-#nextBtn {
-  margin: 200px;
-  color: #aa4a30;
-  background-color: #d57149;
-  border: 3px solid #aa4a30;
-  border-radius: 3px;
-  width: 100px;
-  height: 30px;
-  font-size: medium;
-  display: none;
-}
-
 h4 {
   margin-left: 900px;
 }
@@ -82,4 +70,15 @@ h4 {
 .finalTime {
   display: none;
   justify-content: center;
+}
+
+#submit {
+  margin: 200px;
+  color: #aa4a30;
+  background-color: #d57149;
+  border: 3px solid #aa4a30;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  font-size: medium;
 }
