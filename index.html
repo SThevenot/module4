@@ -13,12 +13,11 @@
     <header>
       <nav>
         <h1>My Quiz</h1>
-        <h3>View high scores</h3>
       </nav>
     </header>
     <hr />
     <main>
-      <h4 class="timer"></h4>
+      <h4 id="timer"></h4>
       <h5 class="finalTime"></h5>
       <div class="box1" data-state="hidden">
         <h2>Which animal is behind the most power outages in the U.S?</h2>
@@ -58,14 +57,16 @@
       <div class="finalScore">
         <label for="initials">Enter initials : </label>
         <br />
-        <input type="text" id="initial" name="initial" />
-        <button id="submit">Submit</button>
+        <input type="text" id="initials" name="initial" />
+        <button id="submit" onclick="renderScoreboard()">Submit</button>
       </div>
       <div id="scoreboard">
         <h2>Scoreboard</h2>
         <p id="scoreDisplay"></p>
       </div>
       <button id="startBtn">Start</button>
+      <button id="startAgainBtn" onclick="resetTimer()">Start Again</button>
+      <button id="retryBtn" onclick="reveal()">Retry</button>
     </main>
     <footer>
       <a href="https://bestlifeonline.com/weird-amazing-facts/"

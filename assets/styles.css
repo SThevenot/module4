@@ -23,11 +23,6 @@ h1 {
   padding: 20px 50px;
 }
 
-h3 {
-  display: flex;
-  padding: 20px 40px;
-}
-
 hr {
   border: 2px #aa4a30 solid;
   width: 95%;
@@ -85,4 +80,44 @@ h4 {
 
 #scoreboard {
   display: none;
+}
+
+#retryBtn {
+  display: none;
+  margin: 200px;
+  color: #aa4a30;
+  background-color: #d57149;
+  border: 3px solid #aa4a30;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  font-size: medium;
+}
+
+
+#startAgainBtn {
+  display: none;
+  margin: 200px;
+  color: #aa4a30;
+  background-color: #d57149;
+  border: 3px solid #aa4a30;
+  border-radius: 3px;
+  width: 150px;
+  height: 30px;
+  font-size: medium;
+  text-align: center;
+}
+
+p:hover {
+  background-color: #aa4a30;
+  cursor:grab;
+}
+
+
+#startBtn:hover,
+#submit:hover,
+#retryBtn:hover,
+#startAgainBtn:hover {
+  background-color: #e89f71;
+  cursor: grab;
 }
