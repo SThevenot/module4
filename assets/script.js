@@ -15,6 +15,12 @@ var finalScoreDiv = document.querySelector(".finalScore");
 var finalTime = document.querySelector(".finalTime");
 var p5true = document.querySelector("#p5true");
 var p5false = document.querySelectorAll(".p5false");
+var submitBtn = document.querySelector("#submit");
+var p5true = document.querySelector("#p5true");
+var scoreDisplay = document.querySelector("#scoreDisplay");
+var scoreboard = document.querySelector("#scoreboard");
+var currentTime = {};
+
 //event listeners
 startButton.addEventListener("click", showDiv1, countdown);
 
@@ -33,6 +39,21 @@ p5false.forEach((element) => {
   });
 });
 
+p5true.addEventListener("click", pause_timer, showScore);
+
+submitBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+  var initials = document.querySelector("#initial").value;
+  if (initials === "") {
+    console.log("yes");
+    alert("error, initials cannot be blank");
+  } else {
+    alert("success, saved successfully");
+    localStorage.setItem("initials", initials);
+    renderScoreboard();
+  }
+  })
+  
 
 //functions
 function countdown() {
@@ -45,8 +66,10 @@ function countdown() {
       timer.textContent = timeLeft + " second remaining";
       timeLeft--;
     } else {
-      timer.textContent = "Time's up!";
+      timer.textContent = "Time's up! Your score is 0";
+      timer.style.margin = 0;
       showScore();
+
       //add in line of code to take user to scoreboard stuff when timer hits 0
     }
   }, 1000);
@@ -93,15 +116,16 @@ function pause_timer() {
   finalTime.textContent = "Your score is " + currentTime;
   timer.style.display = "none";
   finalTime.style.display = "flex";
-  console.log(currentTime);
-  console.log(timeLeft);
+   localStorage.setItem("currentTime", JSON.stringify(currentTime));
 }
 
-// function scoreboard() {
-//   console.log(userInfo);
-// }
 
-// localStorage.setItem("initials", initials);
-// console.log(initials);
-// localStorage.setItem("score", score);
-// console.log(score);
+function renderScoreboard() { 
+var initials = localStorage.getItem("initials");
+var retrieveScore = localStorage.getItem("currentTime");
+scoreDisplay.textContent = retrieveScore + " - " + initials;
+finalScoreDiv.style.display = "none";
+scoreboard.style.display = "flex";
+return;
+}
+

@@ -7,9 +7,6 @@
 
 final score page
 
-Final score!
-enter initials : 
-score is time left at end
 submit button
 shows final score with initials
 go back button to start over

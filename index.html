@@ -50,7 +50,7 @@
       </div>
       <div class="box5" data-number="5" data-state="hidden">
         <h2>What color are some of Australia's lakes?</h2>
-        <p id="p5true">Pink</p>
+        <p id="p5true" onclick="showScore()">Pink</p>
         <p class="p5false" onclick="showScore()">Yellow</p>
         <p class="p5false" onclick="showScore()">Black</p>
         <p class="p5false" onclick="showScore()">Orange</p>
@@ -59,7 +59,11 @@
         <label for="initials">Enter initials : </label>
         <br />
         <input type="text" id="initial" name="initial" />
-        <button id="submit" onclick="scoreboard()">Submit</button>
+        <button id="submit">Submit</button>
+      </div>
+      <div id="scoreboard">
+        <h2>Scoreboard</h2>
+        <p id="scoreDisplay"></p>
       </div>
       <button id="startBtn">Start</button>
     </main>
