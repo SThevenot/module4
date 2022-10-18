@@ -1,6 +1,6 @@
 <!-- @format -->
 
-<h1 align="center"> Random Password Generator </h1>
+<h1 align="center">Timed Quiz</h1>
   <p align="center">
   <img src="https://img.shields.io/badge/license-HTML-green"/>
   <img src="https://img.shields.io/badge/license-CSS-purple"/>
